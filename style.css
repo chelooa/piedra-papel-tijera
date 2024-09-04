@@ -126,61 +126,23 @@ dialog{
     user-select: none;
 }
 
-@media (max-width: 430px){
+
+@media (max-width: 900px){
     .contenedor_elemento_movimientos{
-        width: 8rem;
-        height: 8rem;
+        width: 9rem;
+        height: 9rem;
 
     }
     .imagenes_movimientos{
         width: 3.75rem;
-        height: 4.5rem;
+        height: 3.75rem;
     }
     #papel{
-        width: 2.25rem;
-        height: 2.75rem;
-        margin-right: 5px;
-        margin-bottom: 3px;
-        margin-top: 8px;
-    }
-
-    #tijera{
-        margin-left: 8px;
-    }
-
-    .contenedor_movimientos{
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 3%;
-
-
-    }
-
-    .contenedor_principal{
-        height: 70rem;
-        margin-top: 15rem;
-    }
-
-
-    
-}
-
-@media (max-width: 900px){
-    .contenedor_elemento_movimientos{
-        width: 10rem;
-        height: 10rem;
-
-    }
-    .imagenes_movimientos{
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    #papel{
-        width: 3rem;
-        height: 3.5rem;
+        width: 2.75rem;
+        height: 3.25rem;
         margin-right: 7px;
         margin-bottom: 5px;
-        margin-top: 10px;
+        margin-top: 8px;
     }
 
     #tijera{
@@ -192,6 +154,11 @@ dialog{
         flex-wrap: wrap;
         padding-left: 3%;
     }
+    .contenedor_principal{
+        height: 70rem;
+        margin-top: 15rem;
+    }
+
 
     
 }
