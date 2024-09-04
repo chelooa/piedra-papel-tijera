@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel y Tijera</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+</head>
+<body>
+
+    <main class="contenedor_principal">
+        
+        <h1>Piedra, Papel y Tijera</h1>
+            <div class="contenedor_movimientos">
+                <div id="piedraMovimiento" class="contenedor_elemento_movimientos">
+                    <span><img class="imagenes_movimientos" src="./assets/mano.png" alt="piedra"></span>
+                    <h3>Piedra</h3>
+                </div>
+                <div id="papelMovimiento" class="contenedor_elemento_movimientos">
+                    <span><img id="papel" class="imagenes_movimientos papel" src="./assets/papel-de-mano.png" alt="papel_de_mano"></span>
+                    <h3>Papel</h3>
+                </div>
+                <div id="tijeraMovimiento" class="contenedor_elemento_movimientos">
+                    <span><img id="tijera" class="imagenes_movimientos" src="./assets/tijeras.png" alt="tijeras"></span>
+                    <h3>Tijera</h3>
+                </div>
+            </div>
+        <div>
+            <p>*Instrucciones del Juego</p>
+            <p>Cada vez que presiones un movimiento, el juego se reiniciará automaticamente
+            y podras seguir jugando e intentarlo de nuevo.
+            </p>
+        </div>
+        <dialog id="pop_up" class="ventana_pop_up">
+            <div class="contenedor_cerrar">
+                <span id="cerrar_pop_up" class="material-symbols-outlined">
+                    close
+                    </span>
+            </div>
+            <div class="titulo_texto">
+                <h3 id="resultado">Has ganado</h3>
+                <p id="parrafoResultado">Resultado has sacado elemento y el sistema elemento.</p>
+            </div>
+        </dialog>
+
+    </main>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
