@@ -1,11 +1,11 @@
 
-    let piedraUsuario = document.getElementById("piedraMovimiento").addEventListener("click", function() {
+    const piedraUsuario = document.getElementById("piedraMovimiento").addEventListener("click", function() {
         juego("Piedra")});
 
-    let papelUsuario = document.getElementById("papelMovimiento").addEventListener("click", function() {
+    const papelUsuario = document.getElementById("papelMovimiento").addEventListener("click", function() {
         juego("Papel")});
 
-    let tijeraUsuario = document.getElementById("tijeraMovimiento").addEventListener("click", function() {
+    const tijeraUsuario = document.getElementById("tijeraMovimiento").addEventListener("click", function() {
         juego("Tijera")});
  
     function asignarTextoElemento(elemento, texto) {
@@ -13,26 +13,40 @@
          elementoHTML.innerHTML = texto;
         return;}
 
+    const score = {
+        ganadas: 0,
+        perdidas: 0,
+        empates: 0
+    };
+
 function juego(movimientoUsuario){
     movimientos = ["Piedra","Papel","Tijera"]
     let generarMovimiento = movimientos[Math.floor(Math.random()*3)];
     generarMovimiento;
     if(movimientoUsuario === generarMovimiento){
-        asignarTextoElemento('#resultado', 'Has empatado')
-        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ${generarMovimiento}.`)
+        score.empates += 1;
+        asignarTextoElemento('#resultado', 'Has empatado');
+        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ha sacado ${generarMovimiento}.`);
+            asignarTextoElemento('#parrafoScore', `Partidas Ganadas: ${score.ganadas} Partidas Perdidas ${score.perdidas} Empates ${score.empates}` );
         
     }else if(movimientoUsuario === "Piedra" && generarMovimiento === "Tijera" ||
              movimientoUsuario === "Papel" && generarMovimiento === "Piedra"  ||
              movimientoUsuario === "Tijera" && generarMovimiento === "Papel"
     ){
-        asignarTextoElemento('#resultado', 'Has ganado')
-        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ${generarMovimiento}.`)
+        score.ganadas += 1;
+        asignarTextoElemento('#resultado', 'Has ganado');
+        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ha sacado ${generarMovimiento}.`);
+            asignarTextoElemento('#parrafoScore', `Partidas Ganadas: ${score.ganadas} Partidas Perdidas ${score.perdidas} Empates ${score.empates}` );
     }else{
-        asignarTextoElemento('#resultado', 'Has perdido')
-        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ${generarMovimiento}.`)
+        score.perdidas += 1;
+        asignarTextoElemento('#resultado', 'Has perdido');
+        asignarTextoElemento('#parrafoResultado', `Resultado has sacado ${movimientoUsuario} y el sistema ha sacado ${generarMovimiento}.`);
+        asignarTextoElemento('#parrafoScore', `Partidas Ganadas: ${score.ganadas} Partidas Perdidas ${score.perdidas} Empates ${score.empates}` );
     }
 
 }
+
+
 const abrirPopUp = document.querySelectorAll('#piedraMovimiento, #papelMovimiento, #tijeraMovimiento');
 
 const modal = document.getElementById('pop_up');

@@ -93,7 +93,7 @@ dialog{
     transform: translate(-50%, -50%);
     border: solid black;
     width: 37rem;
-    height: 15rem;
+    height: 17rem;
     border-radius: 10px;
     padding: 35px;
     display:grid;
@@ -111,6 +111,7 @@ dialog{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 9rem ;
 }
 
 .contenedor_cerrar{
@@ -125,9 +126,48 @@ dialog{
     font-weight: 700;
     user-select: none;
 }
-
+.resultadoTexto{
+    padding-left: 4%;
+}
 
 @media (max-width: 900px){
+    .contenedor_elemento_movimientos{
+        width: 10rem;
+        height: 10rem;
+
+    }
+    .imagenes_movimientos{
+        width: 4.25rem;
+        height: 4.25rem;
+    }
+    #papel{
+        width: 3.25rem;
+        height: 3.75rem;
+        margin-right: 7px;
+        margin-bottom: 5px;
+        margin-top: 8px;
+    }
+
+    #tijera{
+        margin-left: 10px;
+    }
+
+    .contenedor_movimientos{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 3%;
+    }
+    body{
+        padding-top: 15%;
+        
+    }
+    h1{
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 550px){
     .contenedor_elemento_movimientos{
         width: 9rem;
         height: 9rem;
@@ -152,13 +192,13 @@ dialog{
     .contenedor_movimientos{
         display: flex;
         flex-wrap: wrap;
-        padding-left: 3%;
+        padding-left: 0%;
+        justify-content: center;
     }
-    .contenedor_principal{
-        height: 70rem;
-        margin-top: 15rem;
+    
+    h1{
+        font-size: 2.75rem;
     }
-
 
     
 }
